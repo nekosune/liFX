@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifX", "LifX\LifX.csproj", "{F615EEA2-8A6A-4801-8437-136038194F31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiFXtest", "LiFXtest\LiFXtest.csproj", "{761913E5-AF78-4505-8412-CF5C37247C20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{761913E5-AF78-4505-8412-CF5C37247C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761913E5-AF78-4505-8412-CF5C37247C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761913E5-AF78-4505-8412-CF5C37247C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761913E5-AF78-4505-8412-CF5C37247C20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F615EEA2-8A6A-4801-8437-136038194F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F615EEA2-8A6A-4801-8437-136038194F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F615EEA2-8A6A-4801-8437-136038194F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F615EEA2-8A6A-4801-8437-136038194F31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
