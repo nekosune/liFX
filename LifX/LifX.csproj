@@ -36,6 +36,7 @@
     <Compile Include="Message.cs" />
     <Compile Include="Messages\GetServiceMessage.cs" />
     <Compile Include="Messages\StateServiceMessage.cs" />
+    <Compile Include="LightBulb.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

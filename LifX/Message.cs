@@ -88,7 +88,7 @@ namespace LifX
 			this.Addressable = (fragment & 0x1000) >> 12 == 1;
 			this.Protocol = fragment & 0xFFF;
 			this.Source = BitConverter.ToInt32 (bytes, 4);
-			this.Target = BitConverter.ToUInt64 (bytes, 10) ;
+			this.Target = BitConverter.ToUInt64 (bytes, 8) ;
 			byte acks = bytes[22];
 			this.Ack_Required = (acks & 0x2) >> 1 == 1;
 			this.Res_Required = (acks & 0x1) == 1;
@@ -120,7 +120,7 @@ namespace LifX
 			Int32 source = Source;
 			byte[] SourceBytes = GetBytes (source);
 			bytes.AddRange (SourceBytes);
-			UInt64 target = Target << 16;
+			UInt64 target = Target; //<< 16;
 			bytes.AddRange (GetBytes(target));
 			bytes.AddRange (new byte[]{ 0, 0, 0, 0, 0, 0 });
 			byte acks = 0;
@@ -188,6 +188,11 @@ namespace LifX
 		{
 			types.Add (2, typeof(GetServiceMessage));
 			types.Add (3, typeof(StateServiceMessage));
+		}
+
+		public override string ToString ()
+		{
+			return string.Format ("[Message: Size={0}, Origin={1}, Tagged={2}, Addressable={3}, Protocol={4}, Source={5}, Target={6}, Ack_Required={7}, Res_Required={8}, Sequence={9}, Type={10}]", Size, Origin, Tagged, Addressable, Protocol, Source, Target, Ack_Required, Res_Required, Sequence, Type);
 		}
 	}
 }

@@ -21,9 +21,9 @@ namespace LiFXtest
 		{
 			IPEndPoint ip = new IPEndPoint (IPAddress.Any, 56700);
 			byte[] bytes = udp.EndReceive (ar, ref ip);
+			Console.WriteLine("Returned: {0}",string.Join(",", bytes));
 			StateServiceMessage message = (StateServiceMessage) Message.GetMessage (bytes);
-			Console.Out.WriteLine ("Service: {0}", message.Service);
-			Console.Out.WriteLine ("Port: {0}", message.Port);
+			Console.Out.WriteLine ("{0}", message.ToString ());
 			Console.Out.WriteLine ("IP: {0}", ip.Address.ToString());
 
 		}

@@ -12,6 +12,11 @@ namespace LifX
 			Port = BitConverter.ToInt32 (bytes, 37);
 
 		}
+
+		public override string ToString ()
+		{
+			return string.Format (" {0} [StateServiceMessage: Service={1}, Port={2}]",base.ToString(), Service, Port);
+		}
 	}
 }
 
